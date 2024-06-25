@@ -15,6 +15,13 @@ import java.util.List;
 */
 public interface GraphInfoMapper extends BaseMapper<GraphInfo> {
 
+    /**
+     * 跟剧id查询公寓或房间的照片
+     * @param apartment
+     * @param id
+     * @return
+     */
+    List<GraphVo> graphVoListByItemTypeAndId(ItemType apartment, Long id);
 }
 
 

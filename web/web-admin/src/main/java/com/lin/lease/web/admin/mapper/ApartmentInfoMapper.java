@@ -2,6 +2,7 @@ package com.lin.lease.web.admin.mapper;
 
 import com.lin.lease.model.entity.ApartmentInfo;
 import com.lin.lease.model.enums.LeaseStatus;
+import com.lin.lease.web.admin.vo.apartment.ApartmentDetailVo;
 import com.lin.lease.web.admin.vo.apartment.ApartmentItemVo;
 import com.lin.lease.web.admin.vo.apartment.ApartmentQueryVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -15,6 +16,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 * @Entity com.lin.lease.model.ApartmentInfo
 */
 public interface ApartmentInfoMapper extends BaseMapper<ApartmentInfo> {
+
+    IPage<ApartmentItemVo> pageItem(Page<ApartmentItemVo> page, ApartmentQueryVo queryVo);
+
 
 }
 
