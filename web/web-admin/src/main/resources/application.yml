@@ -31,3 +31,4 @@ minio:
 springdoc :
   default-flat-param-object: true
 
+
