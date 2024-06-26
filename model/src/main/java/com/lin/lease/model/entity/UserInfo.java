@@ -21,8 +21,8 @@ public class UserInfo extends BaseEntity {
     @TableField(value = "phone")
     private String phone;
 
-    @Schema(description = "密码")
-    @TableField(value = "password")
+    @Schema(description = "密码" )
+    @TableField(value = "password",select = false)
     private String password;
 
     @Schema(description = "头像url")
