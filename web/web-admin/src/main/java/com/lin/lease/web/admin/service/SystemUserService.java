@@ -12,5 +12,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2023-07-24 15:48:00
 */
 public interface SystemUserService extends IService<SystemUser> {
-
+    /**
+     * 根据SystemUserQueryVo查询员工信息
+     * @param page
+     * @param queryVo
+     * @return
+     */
+    IPage<SystemUserItemVo> listSUserItemVo(IPage<SystemUser> page, SystemUserQueryVo queryVo);
 }

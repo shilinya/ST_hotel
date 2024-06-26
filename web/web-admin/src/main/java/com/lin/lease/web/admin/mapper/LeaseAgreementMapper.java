@@ -14,6 +14,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 */
 public interface LeaseAgreementMapper extends BaseMapper<LeaseAgreement> {
 
+    IPage<AgreementVo> listAgreementVo(IPage<AgreementVo> page,AgreementQueryVo queryVo);
+
+    AgreementVo selectAgreementVo(Long id);
 }
 
 
