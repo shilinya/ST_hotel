@@ -49,7 +49,7 @@
                 and city_id=#{queryVo.cityId}
             </if>
             <if test="queryVo.districtId!=null">
-                and districtId=#{queryVo.districtId}
+
             </if>
         </where>
         )ai
