@@ -12,11 +12,6 @@ import java.util.List;
  * @Entity com.lin.lease.model.PaymentType
  */
 public interface PaymentTypeMapper extends BaseMapper<PaymentType> {
-    /**
-     * 根据房间id查询房间的支付方式
-     * @return
-     */
-    List<PaymentType> listPaymentTypeById(Long id);
 
 }
 

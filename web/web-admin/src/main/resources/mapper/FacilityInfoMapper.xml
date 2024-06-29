@@ -16,16 +16,4 @@
                      where apartment_facility.is_deleted = 0
                        and apartment_id = #{id})
     </select>
-    <select id="selectListByRoomId" resultType="com.lin.lease.model.entity.FacilityInfo">
-        select id,
-               type,
-               name,
-               icon
-        from facility_info
-        where is_deleted = 0
-          and id in (select room_facility.facility_id
-                     from room_facility
-                     where room_facility.is_deleted = 0
-                       and room_id= #{id})
-    </select>
 </mapper>

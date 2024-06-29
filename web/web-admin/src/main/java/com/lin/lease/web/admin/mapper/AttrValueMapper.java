@@ -13,12 +13,7 @@ import java.util.List;
 * @Entity com.lin.lease.model.AttrValue
 */
 public interface AttrValueMapper extends BaseMapper<AttrValue> {
-    /**
-     * 根据房间id查询房间的属性信息
-     * @param id
-     * @return
-     */
-    List<AttrValueVo> listAttrValueVoById(Long id);
+
 }
 
 
