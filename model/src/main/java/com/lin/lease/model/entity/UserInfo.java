@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Schema(description = "用户信息表")
 @TableName(value = "user_info")
 @Data
+
 public class UserInfo extends BaseEntity {
 
     private static final long serialVersionUID = 1L;

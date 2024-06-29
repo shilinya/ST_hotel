@@ -15,6 +15,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 public interface SystemUserMapper extends BaseMapper<SystemUser> {
 
     IPage<SystemUserItemVo> listSUserItemVo(IPage<SystemUser> page, SystemUserQueryVo queryVo);
+
+    SystemUser selectOneByUserName(String username);
 }
 
 

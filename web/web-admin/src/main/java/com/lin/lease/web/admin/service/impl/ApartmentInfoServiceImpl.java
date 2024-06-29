@@ -56,9 +56,26 @@ public class ApartmentInfoServiceImpl extends ServiceImpl<ApartmentInfoMapper, A
     @Autowired
     private RoomInfoMapper roomInfoMapper;
 
+    @Autowired
+    private ProvinceInfoService provinceInfoService;
+    @Autowired
+    private CityInfoService cityInfoService;
+    @Autowired
+    private DistrictInfoService districtInfoService;
+
     @Override
     public void saveOrUpdateApartment(ApartmentSubmitVo apartmentSubmitVo) {
         boolean isUpdate= apartmentSubmitVo.getId()!=null;//不等于null，更新，否则新存
+
+        //根据省市区id为省市区name赋值
+        String provinceName = provinceInfoService.getById(apartmentSubmitVo.getProvinceId()).getName();
+        String cityName = cityInfoService.getById(apartmentSubmitVo.getCityId()).getName();
+        String districtName = districtInfoService.getById(apartmentSubmitVo.getDistrictId()).getName();
+
+        apartmentSubmitVo.setProvinceName(provinceName);
+        apartmentSubmitVo.setCityName(cityName);
+        apartmentSubmitVo.setDistrictName(districtName);
+
         super.saveOrUpdate(apartmentSubmitVo);//保存单独的公寓信息
         if (isUpdate){
             //删除图片列表

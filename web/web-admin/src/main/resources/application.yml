@@ -20,17 +20,19 @@ spring:
       max-request-size: 10MB
   jackson:
     time-zone: GMT+8 #mysql 时区
+  data:
+    redis:
+      host: 192.168.170.10
+      port: 6379
+      database: 0
 
 #用于打印框架生成的sql语句，便于调试
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-minio:
-  endpoint: http://192.168.170.10:9000
-  access-key: minioadmin
-  secret-key: minioadmin
-  bucket-name: lease
+
 springdoc :
   default-flat-param-object: true
+
 
 

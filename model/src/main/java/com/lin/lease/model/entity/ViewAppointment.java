@@ -32,7 +32,7 @@ public class ViewAppointment extends BaseEntity {
     @TableField(value = "apartment_id")
     private Long apartmentId;
 
-    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Schema(description = "预约时间")
     @TableField(value = "appointment_time")
     private Date appointmentTime;
