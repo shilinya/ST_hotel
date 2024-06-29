@@ -22,6 +22,15 @@ public interface GraphInfoMapper extends BaseMapper<GraphInfo> {
      * @return
      */
     List<GraphVo> graphVoListByItemTypeAndId(ItemType apartment, Long id);
+
+    /**
+     * 根据房间id查询房间照片
+     *
+     * @param room
+     * @param id
+     * @return
+     */
+    List<GraphVo> listGraphVoById(ItemType room, Long id);
 }
 
 

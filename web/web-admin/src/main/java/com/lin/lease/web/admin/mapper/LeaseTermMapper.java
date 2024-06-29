@@ -12,7 +12,12 @@ import java.util.List;
 * @Entity com.lin.lease.model.LeaseTerm
 */
 public interface LeaseTermMapper extends BaseMapper<LeaseTerm> {
-
+    /**
+     * 根据房间id查询房间的可选租期列表
+     * @param id
+     * @return
+     */
+    List<LeaseTerm> listTermsById(Long id);
 }
 
 

@@ -14,5 +14,14 @@
         and item_type=#{apartment}
         and item_id=#{id}
     </select>
+    <select id="listGraphVoById" resultType="com.lin.lease.web.admin.vo.graph.GraphVo">
+        select
+            name,
+            url
+        from graph_info
+        where is_deleted=0
+          and item_type=#{room}
+          and item_id=#{id}
+    </select>
 
 </mapper>
